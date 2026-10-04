@@ -51,7 +51,7 @@ Access the application at `http://localhost:5173`.
 
 ---
 
-## 🔑 Environment Variables
+## Environment Variables
 
 ### Backend (`backend/.env`)
 ```env
@@ -69,7 +69,7 @@ VITE_API_URL=http://localhost:4000
 
 ---
 
-## 📡 Socket.IO Real-time Events
+## Socket.IO Real-time Events
 
 ### Client ➔ Server
 * `join-room` `{ roomId }` (with acknowledgment callback)
