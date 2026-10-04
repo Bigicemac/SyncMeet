@@ -1,10 +1,10 @@
-# 🚀 SyncMeet — Real-time Collaboration & Video Meeting Workspace
+# SyncMeet — Real-time Collaboration & Video Meeting Workspace
 
 SyncMeet is a full-stack, real-time collaboration and video meeting platform built with Node.js, Express, Socket.IO, WebRTC mesh networking, and React + Vite.
 
 ---
 
-## 🏗️ Architecture & Communication
+## Architecture & Communication
 
 1. **REST API (Express)**: Handles user registration, authentication (JWT), room creation, and room lookup.
 2. **Socket.IO (Real-time Signaling)**: Handles real-time room joining, chat messaging, media toggling (mic, camera, screen share), host actions (kick participant), and WebRTC SDP offer/answer/ICE candidate signaling.
@@ -12,7 +12,7 @@ SyncMeet is a full-stack, real-time collaboration and video meeting platform bui
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Backend**: Node.js, Express 5, Socket.IO 4, Mongoose 9, MongoDB Atlas, Helmet, Express Rate Limit, JWT, Bcrypt
 * **Frontend**: React 18, Vite 5, React Router DOM 6, Socket.IO Client 4, Vanilla CSS (Dark Glassmorphism)
@@ -20,7 +20,7 @@ SyncMeet is a full-stack, real-time collaboration and video meeting platform bui
 
 ---
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### Option A: Standard NPM Commands (Recommended for Development)
 
