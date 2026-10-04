@@ -21,18 +21,4 @@ Create `frontend/.env`:
 VITE_API_URL=http://localhost:4000
 ```
 
-## Run
 
-Terminal 1:
-
-```bash
-cd backend && npm install && npm start
-```
-
-Terminal 2:
-
-```bash
-cd frontend && npm install && npm run dev
-```
-
-Open http://localhost:5173
