@@ -2,7 +2,7 @@
 
 a real-time collaboration workspace where authenticated users can create and join rooms to communicate and collaborate. The platform should combine live video, audio, screen sharing, participant management, and real-time chat into a single interactive workspace.
 
-**Stack:** React, Node.js, Express, Socket.IO, WebRTC, MongoDB
+**Stack:** React, Node.js, Express, Socket.IO, WebRTC, MongoDB, Docker
 
 ## Setup
 
