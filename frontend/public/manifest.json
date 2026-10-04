@@ -1,0 +1,16 @@
+{
+  "short_name": "SyncMeet",
+  "name": "SyncMeet - Real-time Video Collaboration",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#090a0c",
+  "theme_color": "#090a0c",
+  "display": "standalone",
+  "orientation": "any"
+}

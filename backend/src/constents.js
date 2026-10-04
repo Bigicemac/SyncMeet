@@ -1,1 +1,1 @@
-export const DB_NAME =  "SyncMeet";
+export const DB_NAME = "SyncMeet";
