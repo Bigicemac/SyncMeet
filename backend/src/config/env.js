@@ -10,7 +10,7 @@ dotenv.config({ path: path.resolve(__dirname, "../../../.env") });
 
 export const env = {
   port: process.env.PORT || 4000,
-  mongoUri: process.env.MONGODB_URI,
+  mongoUri: process.env.MONGODB_URI || process.env.MONGO_URI,
   jwtSecret: process.env.JWT_SECRET,
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
   clientUrl: process.env.CLIENT_URL || "http://localhost:5173",
