@@ -21,4 +21,5 @@ Create `frontend/.env`:
 VITE_API_URL=http://localhost:4000
 ```
 
+video link - https://youtu.be/d-Rf9m1JUnc
 
