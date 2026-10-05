@@ -26,21 +26,7 @@ app.use(
 // Allow localhost, local LAN IPs (10.x, 192.168.x, 172.x), and env.clientUrl
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (
-        !origin ||
-        origin.includes("localhost") ||
-        origin.includes("127.0.0.1") ||
-        origin === env.clientUrl ||
-        /^http:\/\/(10|192\.168|172\.(1[6-9]|2[0-9]|3[01]))\.\d+\.\d+(:\d+)?$/.test(
-          origin,
-        )
-      ) {
-        callback(null, true);
-      } else {
-        callback(null, true);
-      }
-    },
+    origin: true,
     credentials: true,
   }),
 );
