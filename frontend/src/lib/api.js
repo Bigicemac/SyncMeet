@@ -1,5 +1,6 @@
 const getApiUrl = () => {
-  const envUrl = import.meta.env.VITE_API_URL;
+  const envUrl =
+    import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
   if (
     envUrl &&
     !envUrl.includes("localhost") &&
@@ -7,11 +8,16 @@ const getApiUrl = () => {
   ) {
     return envUrl;
   }
-  // Automatically match the current hostname (e.g. 10.50.58.22 or localhost) on port 4000
+
   const host =
     typeof window !== "undefined" && window.location.hostname
       ? window.location.hostname
       : "localhost";
+
+  if (host.includes("onrender.com")) {
+    return "https://syncmeet-96uj.onrender.com";
+  }
+
   return `http://${host}:4000`;
 };
 
