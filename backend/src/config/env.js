@@ -13,7 +13,7 @@ export const env = {
   mongoUri:
     process.env.MONGODB_URI ||
     process.env.MONGO_URI ||
-    "mongodb+srv://bigicemac:prathamsawant123@cluster0.wtaryqu.mongodb.net/syncmeet?retryWrites=true&w=majority",
+    "mongodb+srv://traffy1v3g:FFz0XC6cNKxyqkYI@cluster0.wtaryqu.mongodb.net/syncmeet?retryWrites=true&w=majority",
   jwtSecret:
     process.env.JWT_SECRET ||
     "b6333976fc6334dd39692a9620c36ce493ef144631877fa3f0761a9c49f0d90a",
