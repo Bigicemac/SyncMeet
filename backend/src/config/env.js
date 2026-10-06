@@ -13,10 +13,10 @@ export const env = {
   mongoUri:
     process.env.MONGODB_URI ||
     process.env.MONGO_URI ||
-    "mongodb+srv://traffy1v3g:FFz0XC6cNKxyqkYI@cluster0.wtaryqu.mongodb.net/syncmeet?retryWrites=true&w=majority",
+    "mongodb://127.0.0.1:27017/syncmeet",
   jwtSecret:
     process.env.JWT_SECRET ||
-    "b6333976fc6334dd39692a9620c36ce493ef144631877fa3f0761a9c49f0d90a",
+    "syncmeet_default_dev_jwt_secret_key_987654321",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "7d",
   clientUrl: process.env.CLIENT_URL || "*",
 };

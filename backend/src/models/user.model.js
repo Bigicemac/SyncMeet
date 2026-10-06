@@ -19,9 +19,14 @@ const userSchema = new mongoose.Schema(
 
 userSchema.pre("save", async function () {
   if (!this.personalMeetingId) {
-    this.personalMeetingId = Math.floor(
-      1000000000 + Math.random() * 9000000000,
-    ).toString();
+    let pmid;
+    let exists = true;
+    while (exists) {
+      pmid = Math.floor(1000000000 + Math.random() * 9000000000).toString();
+      const count = await mongoose.model("User").countDocuments({ personalMeetingId: pmid });
+      if (count === 0) exists = false;
+    }
+    this.personalMeetingId = pmid;
   }
   if (!this.isModified("password")) return;
   this.password = await bcrypt.hash(this.password, 10);

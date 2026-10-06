@@ -11,15 +11,20 @@ export default function Login() {
   const [error, setError] = useState("");
   const [infoMessage, setInfoMessage] = useState("");
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const submit = async (e) => {
     e.preventDefault();
     setError("");
     setInfoMessage("");
+    setIsSubmitting(true);
     try {
       await login(form.email, form.password);
       navigate("/", { replace: true });
     } catch (err) {
       setError(err.message);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -126,7 +131,9 @@ export default function Login() {
             </a>
           </div>
 
-          <button type="submit">Sign in</button>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Signing in..." : "Sign in"}
+          </button>
         </form>
       </div>
 

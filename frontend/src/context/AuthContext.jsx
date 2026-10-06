@@ -22,9 +22,10 @@ export function AuthProvider({ children }) {
   };
 
   const login = async (email, password) => {
+    const cleanEmail = String(email || "").trim().toLowerCase();
     const data = await request("/api/auth/login", {
       method: "POST",
-      body: { email, password },
+      body: { email: cleanEmail, password },
     });
     const user = data.user ?? {
       id: data.id,
@@ -35,11 +36,12 @@ export function AuthProvider({ children }) {
   };
 
   const register = async (name, email, password) => {
+    const cleanEmail = String(email || "").trim().toLowerCase();
     await request("/api/auth/register", {
       method: "POST",
-      body: { name, email, password },
+      body: { name: name?.trim(), email: cleanEmail, password },
     });
-    await login(email, password);
+    await login(cleanEmail, password);
   };
 
   const logout = () => save(null);
